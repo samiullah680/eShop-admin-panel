@@ -1,4 +1,4 @@
-import { Card, PageHeader } from '@cedcommerce/ounce-ui';
+// import { Card, PageHeader } from '@cedcommerce/ounce-ui';
 import React from 'react';
 // import { DI } from './DependencyInjection';
 
@@ -23,40 +23,41 @@ class ErrorBoundary extends React.Component<any, any> {
         const { message } = this.state;
         if (this.state.hasError) {
             return (
-                <>
-                    <PageHeader title="Something went wrong"        />
-                    <Card>
-                        <div className="inte-flex intel-flex--align-center intel-flex--distribute-center inte-flex--spacing-Extraloose inte-flex--vertical     ">
-                            <div className="inte-flex__item">
-                                <img
-                                    src="https://icons-for-free.com/iconfiles/png/512/bug+fixing+fix+repair+seo+spider+tools+icon-1320196668193986777.png"
-                                    height="200"
-                                />
-                            </div>
-                            <div className="inte-flex__item">
-                                <h3 className="inte__Heading--Medium   none">
-                                    {message != ''
-                                        ? message
-                                        : 'Something went wrong.'}
-                                </h3>
-                            </div>
-                            <div className="inte-flex__item">
-                                <h3 className="inte__text--medium   none">
-                                    We are fixing the bug
-                                </h3>
-                            </div>
-                            <div className="inte-flex__item">
-                                <button
-                                    className="inte-btn inte__plain-btn inte-plain-dark-btn"
-                                    onClick={() => {
-                                        // this.props.history(-1);
-                                    }}>
-                                    <span className="inte__text">Go Back</span>
-                                </button>
-                            </div>
-                        </div>
-                    </Card>
-                </>
+                <><h1>erro boundaries</h1></>
+                // <>
+                //     <PageHeader title="Something went wrong"        />
+                //     <Card>
+                //         <div className="inte-flex intel-flex--align-center intel-flex--distribute-center inte-flex--spacing-Extraloose inte-flex--vertical     ">
+                //             <div className="inte-flex__item">
+                //                 <img
+                //                     src="https://icons-for-free.com/iconfiles/png/512/bug+fixing+fix+repair+seo+spider+tools+icon-1320196668193986777.png"
+                //                     height="200"
+                //                 />
+                //             </div>
+                //             <div className="inte-flex__item">
+                //                 <h3 className="inte__Heading--Medium   none">
+                //                     {message != ''
+                //                         ? message
+                //                         : 'Something went wrong.'}
+                //                 </h3>
+                //             </div>
+                //             <div className="inte-flex__item">
+                //                 <h3 className="inte__text--medium   none">
+                //                     We are fixing the bug
+                //                 </h3>
+                //             </div>
+                //             <div className="inte-flex__item">
+                //                 <button
+                //                     className="inte-btn inte__plain-btn inte-plain-dark-btn"
+                //                     onClick={() => {
+                //                         // this.props.history(-1);
+                //                     }}>
+                //                     <span className="inte__text">Go Back</span>
+                //                 </button>
+                //             </div>
+                //         </div>
+                //     </Card>
+                // </>
             );
         }
 

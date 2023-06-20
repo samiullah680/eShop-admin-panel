@@ -1,15 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FlexLayout, Modal, TextField, TextStyles, Toast, ToastWrapper } from '@cedcommerce/ounce-ui';
 import React, { Suspense, useEffect, useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { hideNotification } from './Actions';
 // import ShowMessage from './Components/Other/Message/ShowMessage';
 import Auth from './components/auth';
-import { ProtectedRoutes } from './components/navigation';
-import { Completed, NewOnboarding, StepOne, StepThree, StepTwo, Welcome } from './components/onboarding';
-import NoNetwork from './components/Panel/NoNetwork';
 import Panel from './components/Panel/Panel';
-import { InternetStatus } from "./components/utils/InternetIssue";
 import { DI, DIProps } from './Core';
 import './style.css';
 interface PropsI extends DIProps {
@@ -19,7 +14,7 @@ function App(Props: PropsI): JSX.Element {
   const userId = Props.di.globalState.get(`user_id`);
   useEffect(() => {
     //watch internet status
-    InternetStatus();
+    // InternetStatus();
   }, []);
 
   return (
@@ -44,7 +39,7 @@ function App(Props: PropsI): JSX.Element {
           }>
 
         </Route>
-        {/* <Route path="*" element={<Navigate to={'/auth/login'} />} /> */}
+        <Route path="*" element={<Navigate to={'/auth/login'} />} />
 
 
       </Routes>

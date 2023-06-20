@@ -1,14 +1,8 @@
-import { AppWrapper, BodyLayout } from "@cedcommerce/ounce-ui";
 
 import PanelHeader from "./PanelHeader";
 const PanelLayout = ({ children }: any) => {
   return (
     <PanelHeader children={children} />
-
-
-
-
-
   );
 };
 
