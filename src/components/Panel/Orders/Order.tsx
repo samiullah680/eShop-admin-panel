@@ -23,7 +23,7 @@ import {
 } from "@chakra-ui/react";
 import { Table } from "antd";
 
-function Product() {
+function Order() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef: any = React.useRef();
   return (
@@ -38,7 +38,7 @@ function Product() {
                   children={<FaSearch />}
                 />
                 <Input
-                  placeholder="Search by brand and title"
+                  placeholder="Search by Order Id and title"
                   htmlSize={26}
                   width={"auto"}
                 />
@@ -80,7 +80,7 @@ function Product() {
               </DrawerContent>
             </Drawer>
           </HStack>
-          <Button colorScheme="blue">Create Product</Button>
+          {/* <Button colorScheme="blue">Create Product</Button> */}
         </Flex>
       </Card>
       {/* search feild  */}
@@ -172,4 +172,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Order;

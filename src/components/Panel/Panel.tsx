@@ -26,6 +26,7 @@ import { capitalizeFirstLetter } from "./Function";
 import { PanelLayout } from "../layout";
 import Dashboard from "./Dashboards/Dashboard";
 import Product from "./Products/Product";
+import Order from "./Orders/Order";
 export interface PanelProps extends DIProps {
   name?: string;
   syncNecessaryInfo: () => void;
@@ -82,7 +83,7 @@ function Panel(props: PanelProps): JSX.Element {
               path="product/product-edit"
               element={<h1>Product-edit</h1>}
             />
-            <Route path="order/*" element={<h1>Order List</h1>} />
+            <Route path="order/*" element={<Order />} />
             <Route path="order/order-view" element={<h1>Order view</h1>} />
 
             <Route path="activities" element={<h1>activities Section</h1>} />
